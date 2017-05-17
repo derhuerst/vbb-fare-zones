@@ -1,6 +1,8 @@
 # vbb-fare-zones
 
-**Boilerplate for modules I write.** Work in progress.
+**All VBB stations and their fare zones.** Berlin C zone as well as other cities are still missing.
+
+This list is generated from [`vbb-stations`](https://github.com/derhuerst/vbb-stations) using shapefiles for the zones. **Actually, information like this should be open data published by [VBB](https://www.vbb.de/).**
 
 [![npm version](https://img.shields.io/npm/v/vbb-fare-zones.svg)](https://www.npmjs.com/package/vbb-fare-zones)
 [![build status](https://img.shields.io/travis/derhuerst/vbb-fare-zones.svg)](https://travis-ci.org/derhuerst/vbb-fare-zones)
