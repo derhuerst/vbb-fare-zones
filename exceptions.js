@@ -6,5 +6,7 @@ module.exports = {
 	],
 	insideB: [
 		'900000175010' // U Hönow
+	],
+	insideC: [
 	]
 }

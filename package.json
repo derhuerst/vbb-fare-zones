@@ -12,10 +12,13 @@
 	"license":      "ISC",
 	"engines":      {"node": ">=6"},
 	"devDependencies": {
+		"floordate": "^3.0.0",
 		"german-administrative-areas": "^0.1.0",
 		"node-fetch": "^1.6.3",
+		"queue": "^4.2.1",
 		"@turf/helpers": "^4.3.0",
 		"@turf/inside": "^4.3.0",
+		"vbb-hafas": "derhuerst/vbb-hafas#tickets-parsing",
 		"vbb-stations": "^5.2.0",
 		"tape": "^4.6.3",
 		"tap-min": "^1.2.1"
