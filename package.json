@@ -1,0 +1,23 @@
+{
+	"name":         "vbb-fare-zones",
+	"description":  "All VBB stations and their fare zones.",
+	"version":      "0.1.0",
+	"main":         "index.js",
+	"files":        ["index.js"],
+	"keywords":     ["vbb", "public transport", "fares"],
+	"author":       "Jannis R <mail@jannisr.de>",
+	"homepage":     "https://github.com/derhuerst/vbb-fare-zones",
+	"repository":   "derhuerst/vbb-fare-zones",
+	"bugs":         "https://github.com/derhuerst/vbb-fare-zones/issues",
+	"license":      "ISC",
+	"engines":      {"node": ">=6"},
+	"devDependencies": {
+		"tape": "^4.6.3",
+		"tap-min": "^1.2.1"
+	},
+	"scripts": {
+		"build": "node build.js > index.json",
+		"test": "node test.js | tap-min",
+		"prepublishOnly": "npm run build && npm test"
+	}
+}
