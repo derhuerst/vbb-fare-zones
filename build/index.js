@@ -2,15 +2,12 @@
 
 const fs = require('fs')
 const path = require('path')
+const so = require('so')
+const difference = require('lodash.difference')
 
 const insideA = require('./inside-a')
 const insideB = require('./inside-b')
 const insideC = require('./inside-c')
-
-const showError = (err) => {
-	console.error(err)
-	process.exit(1)
-}
 
 const writeJSON = (file, data) => {
 	return new Promise((yay, nay) => {
@@ -22,25 +19,20 @@ const writeJSON = (file, data) => {
 	})
 }
 
-insideA()
-.then((insideA) => {
-	console.error('Berlin A', insideA.length)
-	return writeJSON('a.json', insideA)
-})
-.catch(showError)
+so(function* () {
+	const A = yield insideA()
+	console.error('Berlin A', A.length)
+	yield writeJSON('a.json', A)
 
-// todo: subtract
+	const B = difference(yield insideB(), A)
+	console.error('Berlin B', B.length)
+	yield writeJSON('b.json', B)
 
-insideB()
-.then((insideB) => {
-	console.error('Berlin B', insideB.length)
-	return writeJSON('b.json', insideB)
+	const C = difference(yield insideC(), B)
+	console.error('Berlin C', C.length)
+	yield writeJSON('c.json', C)
+})()
+.catch((err) => {
+	console.error(err)
+	process.exit(1)
 })
-.catch(showError)
-
-insideC()
-.then((insideC) => {
-	console.error('Berlin C', insideC.length)
-	return writeJSON('c.json', insideC)
-})
-.catch(showError)
