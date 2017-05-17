@@ -1,6 +1,6 @@
 # vbb-fare-zones
 
-**Boilerplate for modules I write.**
+**Boilerplate for modules I write.** Work in progress.
 
 [![npm version](https://img.shields.io/npm/v/vbb-fare-zones.svg)](https://www.npmjs.com/package/vbb-fare-zones)
 [![build status](https://img.shields.io/travis/derhuerst/vbb-fare-zones.svg)](https://travis-ci.org/derhuerst/vbb-fare-zones)
@@ -17,8 +17,22 @@ npm install vbb-fare-zones
 
 ## Usage
 
+The [npm package](https://www.npmjs.com/package/vbb-fare-zones) contains a file for each zone. Each file contains an array of [station IDs](https://github.com/derhuerst/vbb-stations#usage).
+
+To get stations of a single zone, require the corresponding file:
+
 ```js
-todo
+const insideA = require('vbb-fare-zones/a.json')
+
+console.log(insideA)
+```
+
+To get all zones, require the whole module:
+
+```js
+const {A, B, C} = require('vbb-fare-zones')
+
+console.log(A, B, C)
 ```
 
 
