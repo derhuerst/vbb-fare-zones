@@ -1,5 +1,7 @@
 # vbb-fare-zones
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/derhuerst/vbb-fare-zones.svg)](https://greenkeeper.io/)
+
 **All VBB stations and their fare zones.** Berlin C zone as well as other cities are still missing.
 
 This list is generated from [`vbb-stations`](https://github.com/derhuerst/vbb-stations) using shapefiles for the zones. **Actually, information like this should be open data published by [VBB](https://www.vbb.de/).**
