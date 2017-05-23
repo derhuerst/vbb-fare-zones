@@ -1,6 +1,6 @@
 'use strict'
 
-const states = require('german-administrative-areas/länder.geo.json')
+const states = require('german-administrative-areas/laender.geo.json')
 const stations = require('vbb-stations')
 const {point} = require('@turf/helpers')
 const inside = require('@turf/inside')
