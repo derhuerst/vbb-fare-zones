@@ -12,7 +12,7 @@
 	"license":      "ISC",
 	"engines":      {"node": ">=6"},
 	"devDependencies": {
-		"german-administrative-areas": "^0.1.0",
+		"german-administrative-areas": "^0.2.0",
 		"lodash.difference": "^4.5.0",
 		"node-fetch": "^1.6.3",
 		"so": "^1.0.1",
