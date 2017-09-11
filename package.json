@@ -1,28 +1,40 @@
 {
-	"name":         "vbb-fare-zones",
-	"description":  "All VBB stations and their fare zones.",
-	"version":      "0.1.0",
-	"main":         "index.js",
-	"files":        ["index.js", "a.json", "b.json", "c.json"],
-	"keywords":     ["vbb", "public transport", "fares"],
-	"author":       "Jannis R <mail@jannisr.de>",
-	"homepage":     "https://github.com/derhuerst/vbb-fare-zones",
-	"repository":   "derhuerst/vbb-fare-zones",
-	"bugs":         "https://github.com/derhuerst/vbb-fare-zones/issues",
-	"license":      "ISC",
-	"engines":      {"node": ">=6"},
+	"name": "vbb-fare-zones",
+	"description": "All VBB stations and their fare zones.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"a.json",
+		"b.json",
+		"c.json"
+	],
+	"keywords": [
+		"vbb",
+		"public transport",
+		"fares"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/vbb-fare-zones",
+	"repository": "derhuerst/vbb-fare-zones",
+	"bugs": "https://github.com/derhuerst/vbb-fare-zones/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
 	"devDependencies": {
-		"german-administrative-areas": "^0.2.0",
-		"lodash.difference": "^4.5.0",
-		"node-fetch": "^1.6.3",
-		"so": "^1.0.1",
 		"@turf/helpers": "^4.3.0",
 		"@turf/inside": "^4.3.0",
-		"vbb-stations": "^5.2.0",
-		"lodash.uniq": "^4.5.0",
+		"fetch-ponyfill": "^4.0.0",
+		"german-administrative-areas": "^0.2.0",
+		"lodash.difference": "^4.5.0",
 		"lodash.intersection": "^4.4.0",
+		"lodash.uniq": "^4.5.0",
+		"pinkie-promise": "^2.0.1",
+		"so": "^1.0.1",
+		"tap-min": "^1.2.1",
 		"tape": "^4.6.3",
-		"tap-min": "^1.2.1"
+		"vbb-stations": "^5.2.0"
 	},
 	"scripts": {
 		"build": "node build/index.js",

@@ -1,6 +1,6 @@
 'use strict'
 
-const fetch = require('node-fetch')
+const {fetch} = require('fetch-ponyfill')({Promise: require('pinkie-promise')})
 const stations = require('vbb-stations')
 const {point} = require('@turf/helpers')
 const inside = require('@turf/inside')
