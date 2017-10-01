@@ -23,7 +23,7 @@
 		"node": ">=6"
 	},
 	"devDependencies": {
-		"@turf/helpers": "^4.3.0",
+		"@turf/helpers": "^5.0.0",
 		"@turf/inside": "^4.3.0",
 		"fetch-ponyfill": "^4.0.0",
 		"german-administrative-areas": "^0.2.0",
