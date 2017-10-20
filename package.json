@@ -24,7 +24,7 @@
 	},
 	"devDependencies": {
 		"@turf/helpers": "^5.0.0",
-		"@turf/inside": "^4.3.0",
+		"@turf/inside": "^5.0.0",
 		"fetch-ponyfill": "^4.0.0",
 		"german-administrative-areas": "^0.2.0",
 		"lodash.difference": "^4.5.0",
