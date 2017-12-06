@@ -26,6 +26,7 @@
 		"@turf/boolean-point-in-polygon": "^5.0.4",
 		"@turf/helpers": "^5.0.0",
 		"fetch-ponyfill": "^4.0.0",
+		"floordate": "^3.0.0",
 		"german-administrative-areas": "^0.2.0",
 		"lodash.difference": "^4.5.0",
 		"lodash.intersection": "^4.4.0",
@@ -36,7 +37,7 @@
 		"tap-min": "^1.2.1",
 		"tape": "^4.6.3",
 		"vbb-hafas": "^3.1.0",
-		"vbb-stations": "^5.2.0"
+		"vbb-stations": "^5.8.0"
 	},
 	"scripts": {
 		"build": "node build/index.js",
