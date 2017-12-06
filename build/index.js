@@ -28,7 +28,7 @@ so(function* () {
 	console.error('Berlin B', B.length)
 	yield writeJSON('b.json', B)
 
-	const C = difference(yield insideC(), B)
+	const C = difference(yield insideC(A, B), B)
 	console.error('Berlin C', C.length)
 	yield writeJSON('c.json', C)
 })()
