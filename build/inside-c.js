@@ -10,42 +10,48 @@ const week = 7 * 24 * hour
 const when = new Date(+floor(new Date(), 'week') + week + 7 * hour) // next Monday
 const friedrichstr = '900000100001'
 
-const isCTicket = t => t.coverage === 'ABC'
+const checkIfABCTicket = (stationId) => {
+	try {
+		return journeys(stationId, friedrichstr, {
+			when, results: 1, tickets: true
+		})
+		.then(([journey]) => {
+			if (!Array.isArray(journey.tickets)) {
+				throw new Error('journey has no tickets')
+			}
+
+			return !!journey.tickets.some(t => t.coverage === 'ABC')
+		})
+		.catch((err) => {
+			err.message = stationId + ': ' + err.message
+			throw err
+		})
+	} catch (err) {
+		err.message = stationId + ': ' + err.message
+		return Promise.reject(err)
+	}
+}
 
 const insideC = (insideA, insideB) => {
 	return new Promise((resolve, reject) => {
 		const queue = createQueue({concurrency: 8, autostart: true})
 		const insideC = []
+		queue.once('end', () => resolve(insideC))
+		queue.on('error', (err) => console.error(err.message))
 
 		const checkIfInside = (stationId) => (cb) => {
-			try {
-				journeys(stationId, friedrichstr, {
-					when, results: 1, tickets: true
-				})
-				.catch((err) => {
-					err.message = stationId + ': ' + err.message
-					throw err
-				})
-				.then(([journey]) => {
-					if (!Array.isArray(journey.tickets)) {
-						return cb(new Error(stationId + ': journey has no tickets'))
-					}
-					const abcTicket = journey.tickets.some(isCTicket)
-					if (abcTicket) insideC.push(insideC)
-					cb()
-				})
-				.catch(cb)
-			} catch (err) {}
+			checkIfABCTicket(stationId)
+			.then((hasABCTicket) => {
+				if (hasABCTicket) insideC.push(stationId)
+				cb()
+			})
+			.catch(cb)
 		}
 
 		for (let s of stations('all')) {
 			if (insideA.includes(s.id) || insideB.includes(s.id)) continue
 			queue.push(checkIfInside(s.id))
 		}
-		queue.on('error', (err) => {
-			console.error(err.message || ('' + err))
-		})
-		queue.once('end', () => resolve(insideC))
 	})
 }
 
