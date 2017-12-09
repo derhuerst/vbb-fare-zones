@@ -17,7 +17,9 @@ const checkIfABCTicket = (stationId) => {
 		})
 		.then(([journey]) => {
 			if (!Array.isArray(journey.tickets)) {
-				throw new Error('journey has no tickets')
+				const err = new Error('journey has no tickets')
+				err.isUserError = true
+				throw err
 			}
 
 			return !!journey.tickets.some(t => t.coverage === 'ABC')
@@ -37,7 +39,9 @@ const insideC = (insideA, insideB) => {
 		const queue = createQueue({concurrency: 8, autostart: true})
 		const insideC = []
 		queue.once('end', () => resolve(insideC))
-		queue.on('error', (err) => console.error(err.message))
+		queue.on('error', (err) => {
+			console.error(err.isHafasError || err.isUserError ? err.message : err)
+		})
 
 		const checkIfInside = (stationId) => (cb) => {
 			checkIfABCTicket(stationId)

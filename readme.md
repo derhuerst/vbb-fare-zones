@@ -38,6 +38,11 @@ console.log(A, B, C)
 ```
 
 
+## Related
+
+- [`vbb-fare-zone`](https://github.com/juliuste/vbb-fare-zone) – Fetch fare zone information for given VBB stations
+
+
 ## Contributing
 
 If you **have a question**, **found a bug** or want to **propose a feature**, have a look at [the issues page](https://github.com/derhuerst/vbb-fare-zones/issues).
