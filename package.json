@@ -31,7 +31,7 @@
 		"lodash.difference": "^4.5.0",
 		"lodash.intersection": "^4.4.0",
 		"lodash.uniq": "^4.5.0",
-		"pinkie-promise": "^2.0.1",
+		"pinkie-promise": ,
 		"queue": "^4.4.2",
 		"so": "^1.0.1",
 		"tap-min": "^1.2.1",
