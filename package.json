@@ -37,7 +37,7 @@
 		"tap-min": "^1.2.1",
 		"tape": "^4.6.3",
 		"vbb-hafas": "^3.1.0",
-		"vbb-stations": "^5.8.0"
+		"vbb-stations": "^6.0.0"
 	},
 	"scripts": {
 		"build": "node build/index.js",
