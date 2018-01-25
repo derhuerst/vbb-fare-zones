@@ -19,7 +19,7 @@ const insideA = () => {
 		const insideA = Array.from(exceptions)
 
 		for (let s of stations('all')) {
-			const p = point([s.coordinates.longitude, s.coordinates.latitude])
+			const p = point([s.location.longitude, s.location.latitude])
 			if (inside(p, sBahnRing)) insideA.push(s.id)
 		}
 

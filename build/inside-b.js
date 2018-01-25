@@ -13,7 +13,7 @@ const insideB = () => {
 	const insideB = Array.from(exceptions)
 
 	for (let s of stations('all')) {
-		const p = point([s.coordinates.longitude, s.coordinates.latitude])
+		const p = point([s.location.longitude, s.location.latitude])
 		if (inside(p, berlin)) insideB.push(s.id)
 	}
 
