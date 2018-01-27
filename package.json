@@ -24,7 +24,7 @@
 	},
 	"devDependencies": {
 		"@turf/boolean-point-in-polygon": "^5.0.4",
-		"@turf/helpers": "^5.0.0",
+		"@turf/helpers": "^6.0.0",
 		"fetch-ponyfill": "^4.0.0",
 		"floordate": "^3.0.0",
 		"german-administrative-areas": "^0.2.0",
