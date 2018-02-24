@@ -3,7 +3,7 @@
 const {fetch} = require('fetch-ponyfill')({Promise: require('pinkie-promise')})
 const stations = require('vbb-stations')
 const {point} = require('@turf/helpers')
-const inside = require('@turf/boolean-point-in-polygon')
+const inside = require('@turf/boolean-point-in-polygon').default
 
 const exceptions = require('../exceptions').insideA
 

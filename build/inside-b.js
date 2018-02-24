@@ -3,7 +3,7 @@
 const states = require('german-administrative-areas/laender.geo.json')
 const stations = require('vbb-stations')
 const {point} = require('@turf/helpers')
-const inside = require('@turf/boolean-point-in-polygon')
+const inside = require('@turf/boolean-point-in-polygon').default
 
 const exceptions = require('../exceptions').insideB
 

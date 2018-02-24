@@ -23,7 +23,7 @@
 		"node": ">=6"
 	},
 	"devDependencies": {
-		"@turf/boolean-point-in-polygon": "^5.0.4",
+		"@turf/boolean-point-in-polygon": "^6.0.0",
 		"@turf/helpers": "^6.0.0",
 		"fetch-ponyfill": "^5.0.0",
 		"floordate": "^3.0.0",
