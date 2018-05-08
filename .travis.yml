@@ -15,7 +15,7 @@ deploy:
   provider: npm
   on:
     branch: master
-    node: '6'
+    node: 'stable'
   email: 'mail@jannisr.de'
   api_key: ${NPM_KEY}
   skip_cleanup: true
