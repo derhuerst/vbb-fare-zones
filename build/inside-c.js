@@ -2,7 +2,7 @@
 
 const floor = require('floordate')
 const createQueue = require('queue')
-const {journeys} = require('vbb-hafas')
+const createHafas = require('vbb-hafas')
 const stations = require('vbb-stations')
 
 const hour = 60 * 60 * 1000
@@ -10,10 +10,12 @@ const week = 7 * 24 * hour
 const when = new Date(+floor(new Date(), 'week') + week + 7 * hour) // next Monday
 const friedrichstr = '900000100001'
 
+const hafas = createHafas('vbb-fare-zones build')
+
 const checkIfABCTicket = (stationId) => {
 	try {
-		return journeys(stationId, friedrichstr, {
-			when, results: 1, tickets: true
+		return hafas.journeys(stationId, friedrichstr, {
+			depature: when, results: 1, stopovers: true, tickets: true
 		})
 		.then(([journey]) => {
 			if (!Array.isArray(journey.tickets)) {
