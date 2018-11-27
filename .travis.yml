@@ -7,8 +7,7 @@ script:
   - npm test
 before_deploy:
   - ls -lh a.json b.json c.json
-  - npm i semver
-  - npm version --no-git-tag-version --force $(./node_modules/.bin/semver -i minor $(npm info vbb-fare-zones version))
+  - npm version --no-git-tag-version --force $(npx semver -- -i minor $(npm info vbb-fare-zones version))
 deploy:
   provider: npm
   on:
