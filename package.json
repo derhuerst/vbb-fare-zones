@@ -1,7 +1,7 @@
 {
 	"name": "vbb-fare-zones",
 	"description": "All VBB stations and their fare zones.",
-	"version": "1.0.0",
+	"version": "1.4.1",
 	"main": "index.js",
 	"files": [
 		"index.js",

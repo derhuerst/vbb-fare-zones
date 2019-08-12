@@ -1,6 +1,6 @@
 # vbb-fare-zones
 
-**All VBB stations and their fare zones.** Other cities are still missing.
+**All VBB stations and their fare zones.** Other cities than Berlin are still missing.
 
 This list is generated from [`vbb-stations`](https://github.com/derhuerst/vbb-stations). The build script uses shapefiles, and queries tickets from each station to Berlin as a fallback. **Actually, information like this should be open data published by [VBB](https://www.vbb.de/).**
 
