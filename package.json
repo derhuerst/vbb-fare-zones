@@ -1,47 +1,53 @@
 {
-	"name": "vbb-fare-zones",
-	"description": "All VBB stations and their fare zones.",
-	"version": "1.4.2",
-	"main": "index.js",
-	"files": [
-		"index.js",
-		"a.json",
-		"b.json",
-		"c.json"
-	],
-	"keywords": [
-		"vbb",
-		"public transport",
-		"fares"
-	],
-	"author": "Jannis R <mail@jannisr.de>",
-	"homepage": "https://github.com/derhuerst/vbb-fare-zones",
-	"repository": "derhuerst/vbb-fare-zones",
-	"bugs": "https://github.com/derhuerst/vbb-fare-zones/issues",
-	"license": "ISC",
-	"engines": {
-		"node": ">=6"
-	},
-	"devDependencies": {
-		"@turf/boolean-point-in-polygon": "^6.0.0",
-		"@turf/helpers": "^6.0.0",
-		"fetch-ponyfill": "^6.0.0",
-		"floordate": "^3.0.0",
-		"german-administrative-areas": "^0.2.0",
-		"lodash.difference": "^4.5.0",
-		"lodash.intersection": "^4.4.0",
-		"lodash.uniq": "^4.5.0",
-		"pinkie-promise": "^2.0.1",
-		"queue": "^6.0.0",
-		"so": "^1.0.1",
-		"tap-min": "^1.2.1",
-		"tape": "^5.0.0",
-		"vbb-hafas": "^5.0.0",
-		"vbb-stations": "^6.1.0"
-	},
-	"scripts": {
-		"build": "env NODE_ENV=dev node build/index.js",
-		"test": "node test.js | tap-min",
-		"prepublishOnly": "npm run build && npm test"
-	}
+  "name": "vbb-fare-zones",
+  "description": "All VBB stations and their fare zones.",
+  "version": "1.4.2",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "a.json",
+    "b.json",
+    "c.json"
+  ],
+  "keywords": [
+    "vbb",
+    "public transport",
+    "fares"
+  ],
+  "author": "Jannis R <mail@jannisr.de>",
+  "homepage": "https://github.com/derhuerst/vbb-fare-zones",
+  "repository": "derhuerst/vbb-fare-zones",
+  "bugs": "https://github.com/derhuerst/vbb-fare-zones/issues",
+  "license": "ISC",
+  "engines": {
+    "node": ">=6"
+  },
+  "devDependencies": {
+    "@turf/boolean-point-in-polygon": "^6.0.0",
+    "@turf/helpers": "^6.0.0",
+    "fetch-ponyfill": "^6.0.0",
+    "floordate": "^3.0.0",
+    "german-administrative-areas": "^0.2.0",
+    "lodash.difference": "^4.5.0",
+    "lodash.intersection": "^4.4.0",
+    "lodash.uniq": "^4.5.0",
+    "pinkie-promise": "^2.0.1",
+    "queue": "^6.0.0",
+    "so": "^1.0.1",
+    "tap-min": "^1.2.1",
+    "tape": "^5.0.0",
+    "vbb-hafas": "^5.0.0",
+    "vbb-stations": "^6.1.0"
+  },
+  "scripts": {
+    "build": "env NODE_ENV=dev node build/index.js",
+    "test": "node test.js | tap-min",
+    "prepublishOnly": "npm run build && npm test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.319.0"
+  }
 }
